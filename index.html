@@ -17,6 +17,15 @@
             color: white;
             padding: 2rem 0;
             text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
         }
         header h1 {
             font-size: 3rem;
@@ -54,8 +63,29 @@
         .intro button:hover {
             background-color: #45a049;
         }
-        .section {
+        .tabs {
+            display: flex;
+            justify-content: center;
             margin-top: 2rem;
+        }
+        .tabs button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 0 0.5rem;
+        }
+        .tabs button:hover {
+            background-color: #45a049;
+        }
+        .section {
+            display: none;
+            margin-top: 2rem;
+        }
+        .section.active {
+            display: block;
         }
         h2 {
             color: #4CAF50;
@@ -89,18 +119,37 @@
             background-color: #333;
             color: white;
             width: 100%;
-            position: fixed;
-            bottom: 0;
+        }
+        .resume-download {
+            display: block;
+            text-align: center;
+            margin: 1rem 0;
+        }
+        .resume-download a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .resume-download a:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="your-photo-url.jpg" alt="Sandeep's Photo">
         <h1>Hello, I'm Sandeep</h1>
-        <p>Product Manager who believes in building items that drive customer satisfaction and business outcomes.</p>
-        <button onclick="scrollToSection('what-i-do')">What I Do</button>
+        <p>Product Manager who believes in building solutions that enhance customer satisfaction and achieve business goals.</p>
+        <button onclick="showSection('what-i-do')">What I Do</button>
     </header>
     <div class="container">
+        <div class="tabs">
+            <button onclick="showSection('what-i-do')">What I Do</button>
+            <button onclick="showSection('about')">About</button>
+            <button onclick="showSection('contact')">Contact</button>
+        </div>
         <section id="what-i-do" class="section">
             <h2>What I Do</h2>
             <div class="about-section">
@@ -139,6 +188,9 @@
                     </ul>
                 </div>
             </div>
+            <div class="resume-download">
+                <a href="your-resume-url.pdf" download>Download My Resume</a>
+            </div>
         </section>
         <section id="about" class="section">
             <div class="about-section">
@@ -160,27 +212,23 @@
                 </div>
             </div>
         </section>
-        <section id="contact" class="section hide">
+        <section id="contact" class="section">
             <h2>Contact</h2>
             <p>📧 Email Me:<br>sndpkumar552@gmail.com</p>
             <p>📞 Ring Me:<br>+91 9698133065</p>
-            <p>💼 Connect on LinkedIn:<br><a href="https://www.linkedin.com/in/sandeep-kumar-421618187/">LinkedIn Profile</a></p>
-            <p>Feel free to drop me a line, give me a call, or connect with me on LinkedIn!</p>
+            <p>💼 Connect on LinkedIn:<br><a href="https://www.linkedin.com/in/sandeep-kumar">Sandeep Kumar's LinkedIn</a></p>
         </section>
     </div>
     <footer>
-        &copy; 2024 Sandeep. All rights reserved.
+        <p>&copy; 2024 Sandeep. All rights reserved.</p>
     </footer>
     <script>
         function showSection(sectionId) {
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => {
-                section.classList.add('hide');
-                section.classList.remove('show');
+                section.classList.remove('active');
             });
-            const sectionToShow = document.getElementById(sectionId);
-            sectionToShow.classList.add('show');
-            sectionToShow.classList.remove('hide');
+            document.getElementById(sectionId).classList.add('active');
         }
     </script>
 </body>
