@@ -94,7 +94,7 @@
         <a href="#contact" onclick="showSection('contact')">Contact</a>
     </nav>
     <div class="container">
-        <section id="about" class="show">
+        <section id="about" class="section show">
             <div class="about-section">
                 <div class="about-box" style="order: 1;">
                     <h2>About</h2>
@@ -168,19 +168,16 @@
     <footer>
         &copy; 2024 Sandeep. All rights reserved.
     </footer>
-
     <script>
         function showSection(sectionId) {
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => {
-                if (section.id === sectionId) {
-                    section.classList.remove('hide');
-                    section.classList.add('show');
-                } else {
-                    section.classList.remove('show');
-                    section.classList.add('hide');
-                }
+                section.classList.add('hide');
+                section.classList.remove('show');
             });
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.add('show');
+            sectionToShow.classList.remove('hide');
         }
     </script>
 </body>
