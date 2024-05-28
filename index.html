@@ -36,7 +36,7 @@
             margin: 0.5rem 0 1.5rem;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px; /* Increase max-width for a wider container */
             margin: 2rem auto;
             padding: 1rem;
             background-color: white;
@@ -102,7 +102,7 @@
             flex-wrap: wrap;
         }
         .about-box {
-            flex: 1;
+            flex: 1 1 calc(50% - 2rem); /* Adjust for better layout in wider container */
             margin: 1rem;
             padding: 1rem;
             background: #f9f9f9;
@@ -139,10 +139,10 @@
 </head>
 <body>
     <header>
-        <img src="profile.jpg" alt="Sandeep's Photo">
+        <img src="your-photo-url.jpg" alt="Sandeep's Photo">
         <h1>Hello, I'm Sandeep</h1>
-        <p>Product Manager who believes in building solutions that enhance customer satisfaction and achieve business goals.</p>
-        <button onclick="showSection('what-i-do')">Who Am I?</button>
+        <p>Product Manager who believes in building items that drive customer satisfaction and business outcomes.</p>
+        <button onclick="showSection('what-i-do')">Whom Am I?</button>
     </header>
     <div class="container">
         <div class="tabs">
@@ -189,7 +189,7 @@
                 </div>
             </div>
             <div class="resume-download">
-                <a href="resume.pdf" download>Download My Resume</a>
+                <a href="your-resume-url.pdf" download>Download My Resume</a>
             </div>
         </section>
         <section id="about" class="section">
