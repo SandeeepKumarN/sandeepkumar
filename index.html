@@ -45,26 +45,25 @@
         h1, h2, h3 {
             color: #4CAF50;
         }
-        .section {
-            margin-bottom: 2rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-            padding: 1rem;
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
-        .section:hover {
+        .about-box {
+            flex: 1 1 calc(50% - 1rem);
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .about-box:hover {
             transform: scale(1.05);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
-        .section-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        .section-content div {
-            flex: 1;
-            padding: 0 1rem;
-        }
-        .section-content div:hover {
-            background-color: #f9f9f9;
+        .about-box h2 {
+            margin-top: 0;
         }
         footer {
             text-align: center;
@@ -95,21 +94,21 @@
         <a href="#contact" onclick="showSection('contact')">Contact</a>
     </nav>
     <div class="container">
-        <section id="about" class="section show">
-            <div class="section-content">
-                <div>
+        <section id="about" class="show">
+            <div class="about-section">
+                <div class="about-box">
                     <h2>About</h2>
                     <p>I'm a 90's kid who's always been fascinated by the blend of technology and business. As a Product Manager, I have a lot of experience leading teams to create great products. I love figuring out what customers want, shaping product plans, and using market knowledge to make things better for users and businesses. With my strong background in product management and focus on customer satisfaction, I enjoy tackling tough problems and making them into successes.</p>
                 </div>
-                <div>
+                <div class="about-box">
                     <h2>Background</h2>
                     <p>My career path has been a bit different, but I've loved every step of it. Before diving into the tech world, I worked in customer success, helping customers find solutions and learn about products. Now, I'm focused on creating solutions that directly solve customer problems and help businesses succeed.</p>
                 </div>
-                <div>
+                <div class="about-box">
                     <h2>Interests</h2>
                     <p>I'm a big sports fan, and lately, I've discovered a passion for reading books, thanks to some great advice from my manager/mentor. It's really transformed how I approach my role as a product manager. Outside of work, I enjoy spending quality time with both my family and my furry friends.</p>
                 </div>
-                <div>
+                <div class="about-box">
                     <h2>Current Role</h2>
                     <p>Product Owner for Rently Smart Home. In this capacity, I not only identify the right problems to solve but also collaborate closely with the founder/CTO to ensure our solutions align with our company's vision. Sharing these insights with the development team and working hand-in-hand with cross-functional teams, I ensure that our output adds significant value and contributes to achieving our desired outcomes. Regularly checking in with customers, I strive to ensure that our products effectively address their needs and pain points.</p>
                 </div>
