@@ -15,24 +15,16 @@
         header {
             background-color: #4CAF50;
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 0;
             text-align: center;
         }
-        nav {
+        header h1 {
+            font-size: 3rem;
             margin: 0;
-            padding: 1rem;
-            text-align: center;
-            background-color: #333;
         }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-            padding: 0.5rem 1rem;
-            display: inline-block;
-        }
-        nav a:hover {
-            background-color: #575757;
+        header p {
+            font-size: 1.5rem;
+            margin: 0.5rem 0 1.5rem;
         }
         .container {
             max-width: 800px;
@@ -40,30 +32,56 @@
             padding: 1rem;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 5rem; /* Add margin-bottom to create space for footer */
         }
-        h1, h2, h3 {
+        .intro {
+            text-align: center;
+        }
+        .intro h1 {
+            font-size: 3rem;
+        }
+        .intro p {
+            font-size: 1.2rem;
+        }
+        .intro button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .intro button:hover {
+            background-color: #45a049;
+        }
+        .section {
+            margin-top: 2rem;
+        }
+        h2 {
             color: #4CAF50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 1rem;
         }
         .about-section {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
         }
         .about-box {
-            flex: 1 1 calc(50% - 1rem);
-            background-color: #fff;
-            border: 1px solid #ddd;
+            flex: 1;
+            margin: 1rem;
             padding: 1rem;
+            background: #f9f9f9;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .about-box:hover {
             transform: scale(1.05);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-        .about-box h2 {
-            margin-top: 0;
         }
         footer {
             text-align: center;
@@ -74,88 +92,73 @@
             position: fixed;
             bottom: 0;
         }
-        .hide {
-            display: none;
-        }
-        .show {
-            display: block;
-        }
     </style>
 </head>
 <body>
     <header>
-        <img src="profile.jpg" alt="Sandeep's Photo" class="profile-img"><br>
-        <a href="https://www.linkedin.com/in/sandeep-kumar-421618187/">Sandeep Kumar N</a>
-        <h1>Sandeep's Personal Webpage</h1>
+        <h1>Hello, I'm Sandeep</h1>
+        <p>Product Manager who believes in building items that drive customer satisfaction and business outcomes.</p>
+        <button onclick="scrollToSection('what-i-do')">What I Do</button>
     </header>
-    <nav>
-        <a href="#about" onclick="showSection('about')">About</a>
-        <a href="#professional-experience" onclick="showSection('professional-experience')">Professional Experience</a>
-        <a href="#contact" onclick="showSection('contact')">Contact</a>
-    </nav>
     <div class="container">
-        <section id="about" class="section show">
+        <section id="what-i-do" class="section">
+            <h2>What I Do</h2>
             <div class="about-section">
-                <div class="about-box" style="order: 1;">
+                <div class="about-box">
+                    <h3>Product Discovery and Strategy:</h3>
+                    <ul>
+                        <li>Conduct comprehensive market research, competitor analysis, and user persona development to identify key problems and opportunities.</li>
+                        <li>Define product vision and strategy aligning with company goals and objectives, leading to successful product launches and market penetration.</li>
+                    </ul>
+                </div>
+                <div class="about-box">
+                    <h3>User Needs Identification and Requirement Gathering:</h3>
+                    <ul>
+                        <li>Conduct user interviews and surveys to uncover pain points and validate product concepts.</li>
+                        <li>Collaborate with stakeholders to gather and document detailed product requirements and user stories, ensuring alignment with customer needs and market demands.</li>
+                    </ul>
+                </div>
+                <div class="about-box">
+                    <h3>Roadmap Planning and Solution Prototyping:</h3>
+                    <ul>
+                        <li>Develop and manage product roadmaps, ensuring timely delivery of features and enhancements.</li>
+                        <li>Work closely with UX/UI designers to create and test prototypes, incorporating user feedback to refine features before development.</li>
+                    </ul>
+                </div>
+                <div class="about-box">
+                    <h3>Product Development and Cross-Functional Collaboration:</h3>
+                    <ul>
+                        <li>Collaborate with engineering, design, and marketing teams to ensure successful product development and implementation.</li>
+                        <li>Engage with the product marketing team and sales team on go-to-market (GTM) strategies to drive product adoption and revenue growth.</li>
+                    </ul>
+                </div>
+                <div class="about-box">
+                    <h3>Technical Collaboration:</h3>
+                    <ul>
+                        <li>Work closely with engineering teams to ensure technical feasibility and robust implementation of product features, leveraging a strong understanding of engineering principles.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="section">
+            <div class="about-section">
+                <div class="about-box">
                     <h2>About</h2>
                     <p>I'm a 90's kid who's always been fascinated by the blend of technology and business. As a Product Manager, I have a lot of experience leading teams to create great products. I love figuring out what customers want, shaping product plans, and using market knowledge to make things better for users and businesses. With my strong background in product management and focus on customer satisfaction, I enjoy tackling tough problems and making them into successes.</p>
                 </div>
-                <div class="about-box" style="order: 3;">
-                    <h2>Interests</h2>
-                    <p>I'm a big sports fan, and lately, I've discovered a passion for reading books, thanks to some great advice from my manager/mentor. It's really transformed how I approach my role as a product manager. Outside of work, I enjoy spending quality time with both my family and my furry friends.</p>
-                </div>
-                <div class="about-box" style="order: 2;">
+                <div class="about-box">
                     <h2>Background</h2>
                     <p>My career path has been a bit different, but I've loved every step of it. Before diving into the tech world, I worked in customer success, helping customers find solutions and learn about products. Now, I'm focused on creating solutions that directly solve customer problems and help businesses succeed.</p>
                 </div>
-                <div class="about-box" style="order: 4;">
+                <div class="about-box">
+                    <h2>Interests</h2>
+                    <p>I'm a big sports fan, and lately, I've discovered a passion for reading books, thanks to some great advice from my manager/mentor. It's really transformed how I approach my role as a product manager. Outside of work, I enjoy spending quality time with both my family and my furry friends.</p>
+                </div>
+                <div class="about-box">
                     <h2>Current Role</h2>
                     <p>Product Owner for Rently Smart Home. In this capacity, I not only identify the right problems to solve but also collaborate closely with the founder/CTO to ensure our solutions align with our company's vision. Sharing these insights with the development team and working hand-in-hand with cross-functional teams, I ensure that our output adds significant value and contributes to achieving our desired outcomes. Regularly checking in with customers, I strive to ensure that our products effectively address their needs and pain points.</p>
                 </div>
             </div>
-        </section>
-        <section id="professional-experience" class="section hide">
-            <h2>Professional Experience</h2>
-            <p>Product Manager / Product Owner</p>
-            <h3>Product Discovery and Strategy:</h3>
-            <ul>
-                <li>Conducted comprehensive market research, competitor analysis, and user persona development to identify key problems and opportunities.</li>
-                <li>Defined product vision and strategy aligning with company goals and objectives, leading to successful product launches and market penetration.</li>
-            </ul>
-            <h3>User Needs Identification and Requirement Gathering:</h3>
-            <ul>
-                <li>Conducted user interviews and surveys to uncover pain points and validate product concepts.</li>
-                <li>Collaborated with stakeholders to gather and document detailed product requirements and user stories, ensuring alignment with customer needs and market demands.</li>
-            </ul>
-            <h3>Roadmap Planning and Solution Prototyping:</h3>
-            <ul>
-                <li>Developed and managed product roadmaps, ensuring timely delivery of features and enhancements.</li>
-                <li>Worked closely with UX/UI designers to create and test prototypes, incorporating user feedback to refine features before development.</li>
-            </ul>
-            <h3>Product Development and Cross-Functional Collaboration:</h3>
-            <ul>
-                <li>Collaborated with engineering, design, and marketing teams to ensure successful product development and implementation.</li>
-                <li>Engaged with the product marketing team and sales team on go-to-market (GTM) strategies to drive product adoption and revenue growth.</li>
-            </ul>
-            <h3>Enhanced Feature Adoption and Customer Feedback Integration:</h3>
-            <ul>
-                <li>Achieved a 50% increase in feature adoption by implementing an in-product adoption experience, boosting user engagement and satisfaction.</li>
-                <li>Conducted regular customer interviews and integrated insights into the product backlog for continuous improvement.</li>
-            </ul>
-            <h3>Project Delivery and Innovation:</h3>
-            <ul>
-                <li>Successfully delivered stalled projects by identifying and addressing key blockers, coordinating cross-functional teams, and engaging stakeholders.</li>
-                <li>Spearheaded innovative product features, such as new access control systems, resulting in significant increases in sales and user adoption.</li>
-            </ul>
-            <h3>Stakeholder Training and Documentation:</h3>
-            <ul>
-                <li>Conducted monthly training sessions for stakeholders and customer support teams, maintaining high product knowledge and satisfaction.</li>
-                <li>Prepared comprehensive user guides and help articles, facilitating user self-service and reducing support queries.</li>
-            </ul>
-            <h3>Technical Collaboration:</h3>
-            <ul>
-                <li>Worked closely with engineering teams to ensure technical feasibility and robust implementation of product features, leveraging a strong understanding of engineering principles.</li>
-            </ul>
         </section>
         <section id="contact" class="section hide">
             <h2>Contact</h2>
