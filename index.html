@@ -63,6 +63,12 @@
             position: fixed;
             bottom: 0;
         }
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -72,17 +78,18 @@
         <h1>Sandeep's Personal Webpage</h1>
     </header>
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#professional-experience">Professional Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" onclick="showSection('about')">About</a>
+        <a href="#professional-experience" onclick="showSection('professional-experience')">Professional Experience</a>
+        <a href="#contact" onclick="showSection('contact')">Contact</a>
     </nav>
     <div class="container">
-        <section id="about" class="section">
+        <section id="about" class="section show">
             <h2>About Me</h2>
             <p>I am a dedicated and innovative Product Manager with extensive experience in leading cross-functional teams to deliver exceptional products. My passion lies in identifying customer needs, driving product strategy, and leveraging market insights to create solutions that enhance user experience and business growth. With a strong background in product management and a customer-focused mindset, I thrive on turning complex challenges into successful outcomes.</p>
+            <p>Connect with me on LinkedIn: <a href="https://www.linkedin.com/in/sandeep-kumar-421618187/">Sandeep Kumar's LinkedIn</a></p>
         </section>
-        <section id="professional-experience" class="section">
-          <h2>Professional Experience</h2>
+        <section id="professional-experience" class="section hide">
+            <h2>Professional Experience</h2>
             <p>Product Manager / Product Owner</p>
             <h3>Product Discovery and Strategy:</h3>
             <ul>
@@ -123,9 +130,8 @@
             <ul>
                 <li>Worked closely with engineering teams to ensure technical feasibility and robust implementation of product features, leveraging a strong understanding of engineering principles.</li>
             </ul>
-
         </section>
-        <section id="contact" class="section">
+        <section id="contact" class="section hide">
             <h2>Contact</h2>
             <p>Feel free to reach out to me via email at <a href="mailto:sndpkumar552@gmail.com">sndpkumar552@gmail.com</a> or phone at +91 9698133065.</p>
         </section>
@@ -133,5 +139,20 @@
     <footer>
         &copy; 2024 Sandeep. All rights reserved.
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.classList.remove('hide');
+                    section.classList.add('show');
+                } else {
+                    section.classList.remove('show');
+                    section.classList.add('hide');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
