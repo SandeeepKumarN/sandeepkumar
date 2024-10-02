@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 class="title">Hello World! </h1>
+      <p id="currentTime"></p>
+      <script src="script.js"></script>
+  </body>
+</html><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -232,26 +243,27 @@
                 </div>
                 <div class="about-box">
                     <h2>Current Role</h2>
-                    <p>Product Owner for Rently Smart Home. In this capacity, I not only identify the right problems to solve but also collaborate closely with the founder/CTO to ensure our solutions align with our company's vision. Sharing these insights with the development team and working hand-in-hand with cross-functional teams, I ensure that our output adds significant value and contributes to achieving our desired outcomes. Regularly checking in with customers, I strive to ensure that our products effectively address their needs and pain points.</p>
+                    <p>Product Owner for Rently Smart Home. In this capacity, I not only identify the right problems to solve but also collaborate closely with the founder and CTO, playing a crucial role in shaping Rently's product strategy.</p>
                 </div>
             </div>
         </section>
         <section id="contact" class="section">
             <h2>Contact</h2>
-            <p>📧 Email Me: <a href="mailto:sndpkumar552@gmail.com">sndpkumar552@gmail.com</a></p>
-            <p>📞 Ring Me: +91 9698133065</p>
-            <p>💼 Connect on: <a href="https://www.linkedin.com/in/sandeep-kumar-421618187/">LinkedIn</a></p>
+            <ul>
+                <li>Email: <a href="mailto:sndpkumar552@gmail.com">sndpkumar552@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/sandeep-kumar-421618187/" target="_blank">Sandeep Kumar</a></li>
+            </ul>
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Sandeep. All rights reserved.</p>
+        <p>&copy; 2024 Sandeep's Personal Webpage. All rights reserved.</p>
     </footer>
     <script>
         function showSection(sectionId) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
+            var sections = document.getElementsByClassName('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('active');
+            }
             document.getElementById(sectionId).classList.add('active');
         }
     </script>
